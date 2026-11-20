@@ -1,498 +1,843 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tesouros do Céu — Kit de Atividades Bíblicas para Crianças</title>
-<meta name="description" content="A maneira mais fácil e divertida de ensinar a Bíblia para as crianças e tirá-las das telas. Kit em PDF a partir de R$19,90 com garantia de 7 dias.">
-<meta property="og:title" content="Tesouros do Céu — Kit de Atividades Bíblicas">
-<meta property="og:description" content="Atividades bíblicas para imprimir, de 3 a 10 anos. A partir de R$19,90.">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --radius:1rem;
-    --background:oklch(1 0 0);
-    --foreground:oklch(0.2 0.02 260);
-    --card:oklch(1 0 0);
-    --primary:oklch(0.62 0.17 148);
-    --primary-foreground:oklch(1 0 0);
-    --primary-deep:oklch(0.5 0.15 148);
-    --muted:oklch(0.975 0.006 90);
-    --muted-foreground:oklch(0.48 0.02 260);
-    --accent:oklch(0.52 0.2 355);
-    --accent-foreground:oklch(1 0 0);
-    --soft-green:oklch(0.96 0.04 148);
-    --border:oklch(0.92 0.01 90);
-    --shadow-card:0 10px 30px -12px oklch(0.2 0.02 260 / 0.18);
-    --shadow-cta:0 12px 28px -8px oklch(0.62 0.17 148 / 0.55);
-  }
-  *{margin:0;padding:0;box-sizing:border-box;border-color:var(--border)}
-  html{scroll-behavior:smooth}
-  body{
-    background:var(--background);color:var(--foreground);
-    font-family:"Inter",ui-sans-serif,system-ui,sans-serif;
-    -webkit-font-smoothing:antialiased;
-  }
-  img{max-width:100%;height:auto;display:block}
-  a{text-decoration:none;color:inherit}
-  .font-display{font-family:"Nunito",ui-sans-serif,system-ui,sans-serif}
-  .container{max-width:64rem;margin:0 auto}
-  .container-sm{max-width:48rem;margin:0 auto}
-  .text-muted{color:var(--muted-foreground)}
-  .text-primary{color:var(--primary)}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tesouros do Céu — Kit de Atividades Bíblicas para Crianças</title>
+  <meta name="description" content="A maneira mais fácil e divertida de ensinar a Bíblia para as crianças. Kit em PDF a partir de R$14,90 com garantia de 7 dias.">
+  
+  <link rel="icon" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
 
-  /* Barra de oferta */
-  .topbar{
-    background:var(--accent);color:var(--accent-foreground);
-    text-align:center;font-size:.875rem;font-weight:700;padding:.625rem 1rem;
-  }
-
-  /* Botão CTA */
-  .btn-cta{
-    display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
-    width:100%;max-width:32rem;padding:1.1rem 1.5rem;border-radius:9999px;
-    background:var(--primary);color:var(--primary-foreground);
-    font-family:"Nunito",sans-serif;font-weight:900;font-size:1.15rem;text-transform:uppercase;
-    box-shadow:var(--shadow-cta);transition:transform .2s,background .2s;
-    animation:pulse-cta 2.2s ease-in-out infinite;
-  }
-  .btn-cta:hover{background:var(--primary-deep);transform:translateY(-2px)}
-  @keyframes pulse-cta{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
-  .cta-wrap{display:flex;flex-direction:column;align-items:center;gap:.75rem}
-  .cta-note{font-size:.875rem;color:var(--muted-foreground)}
-
-  /* Seções */
-  .section{padding:4rem 1.25rem}
-  .section.alt{background:var(--muted)}
-  @media(min-width:768px){.section{padding:6rem 1.25rem}}
-
-  /* Títulos de seção */
-  .title-block{margin-bottom:2.5rem;text-align:center}
-  .title-block .eyebrow{margin-bottom:.5rem;font-size:.875rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--primary)}
-  .title-block h2{font-family:"Nunito",sans-serif;font-size:1.875rem;font-weight:900;text-transform:uppercase;line-height:1.25}
-  .title-block .sub{margin:1rem auto 0;max-width:42rem;font-size:1.125rem;color:var(--muted-foreground)}
-  @media(min-width:768px){.title-block h2{font-size:3rem}}
-
-  /* Hero */
-  .hero{padding:2.5rem 1.25rem 3.5rem;text-align:center}
-  @media(min-width:768px){.hero{padding-top:3.5rem}}
-  .hero .badge{
-    display:inline-block;margin-bottom:1rem;border-radius:9999px;
-    background:var(--soft-green);color:var(--primary-deep);
-    padding:.375rem 1rem;font-size:.875rem;font-weight:600;
-  }
-  .hero h1{font-family:"Nunito",sans-serif;font-size:1.875rem;font-weight:900;line-height:1.25}
-  @media(min-width:768px){.hero h1{font-size:3rem}}
-  .hero img{margin:2rem auto;width:100%;max-width:42rem}
-  .hero .lead{margin:0 auto;max-width:42rem;font-size:1.125rem;color:var(--muted-foreground)}
-  .price-card{
-    margin:2rem auto 0;max-width:28rem;border-radius:1.5rem;
-    border:2px solid var(--primary);background:var(--card);padding:1.5rem;box-shadow:var(--shadow-card);
-  }
-  .price-card .label{font-size:.875rem;font-weight:700;text-transform:uppercase;color:var(--muted-foreground)}
-  .price-card .price{font-family:"Nunito",sans-serif;font-size:3.75rem;font-weight:900;color:var(--primary)}
-  .price-card .price-sub{margin-bottom:1.25rem;font-size:.875rem;color:var(--muted-foreground)}
-  .price-card .guarantee{margin-top:1rem;font-size:.875rem;font-weight:600}
-  .price-card .perks{margin-top:.75rem;display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1rem;font-size:.75rem;color:var(--muted-foreground)}
-  .hero .next-step{margin:1.25rem auto 0;max-width:28rem;font-size:.75rem;color:var(--muted-foreground)}
-
-  /* Grids */
-  .grid{display:grid;gap:1.25rem}
-  @media(min-width:768px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
-  .card{border-radius:1.5rem;background:var(--card);padding:1.75rem;box-shadow:var(--shadow-card)}
-  .card.center{text-align:center}
-  .card .icon-circle{
-    margin:0 auto 1rem;display:flex;height:4rem;width:4rem;align-items:center;justify-content:center;
-    border-radius:9999px;background:var(--soft-green);font-size:1.875rem;
-  }
-  .card .step{font-size:.875rem;font-weight:700;text-transform:uppercase;color:var(--primary)}
-  .card h3{margin-top:.25rem;font-family:"Nunito",sans-serif;font-size:1.25rem;font-weight:800}
-  .card p{margin-top:.5rem;color:var(--muted-foreground)}
-
-  /* Kit grid */
-  .kit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-  @media(min-width:640px){.kit-grid{grid-template-columns:repeat(3,1fr)}}
-  @media(min-width:768px){.kit-grid{grid-template-columns:repeat(4,1fr)}}
-  .kit-item{border-radius:1.5rem;background:var(--muted);padding:1rem;text-align:center;transition:transform .2s}
-  .kit-item:hover{transform:translateY(-4px)}
-  .kit-item img{margin:0 auto;aspect-ratio:1/1;width:100%;object-fit:contain}
-  .kit-item figcaption{margin-top:.5rem;font-size:.875rem;font-weight:700}
-  .kit-more{
-    display:flex;flex-direction:column;align-items:center;justify-content:center;
-    border-radius:1.5rem;background:var(--primary);color:var(--primary-foreground);padding:1rem;text-align:center;
-  }
-  .kit-more .big{font-family:"Nunito",sans-serif;font-size:2.25rem;font-weight:900}
-  .kit-more .small{font-size:.875rem;font-weight:700}
-
-  /* Depoimentos */
-  .testimonials{display:grid;align-items:start;gap:1.5rem}
-  @media(min-width:640px){.testimonials{grid-template-columns:1fr 1fr}}
-  .testimonials figure{overflow:hidden;border-radius:1.5rem;border:1px solid var(--border);background:var(--card);box-shadow:var(--shadow-card)}
-  .testimonials img{width:100%}
-
-  /* Duas colunas */
-  .split{display:grid;align-items:center;gap:2.5rem}
-  @media(min-width:768px){.split{grid-template-columns:1fr 1fr}}
-  .split h2{font-family:"Nunito",sans-serif;font-size:1.875rem;font-weight:900;text-transform:uppercase;line-height:1.25}
-  @media(min-width:768px){.split h2{font-size:2.25rem}}
-  .check-list{margin-top:1.5rem;list-style:none}
-  .check-list li{display:flex;gap:.75rem;margin-top:.75rem}
-  .check-list .check{color:var(--primary)}
-  .quote-card{border-radius:1.5rem;background:var(--card);padding:2rem;text-align:center;box-shadow:var(--shadow-card)}
-  .quote-card .q{font-family:"Nunito",sans-serif;font-size:1.5rem;font-weight:800}
-  .quote-card p{margin-top:.75rem;color:var(--muted-foreground)}
-
-  /* Bônus */
-  .bonus{border:2px dashed var(--accent);border-radius:2rem;padding:1.5rem}
-  @media(min-width:768px){.bonus{padding:2.5rem}}
-  .bonus .tag{
-    margin:0 auto 1.5rem;width:fit-content;border-radius:9999px;background:var(--accent);
-    color:var(--accent-foreground);padding:.5rem 1.25rem;font-size:.875rem;font-weight:900;text-transform:uppercase;
-  }
-  .bonus img{margin:0 auto;width:100%;max-width:24rem;border-radius:1rem}
-  .bonus h3{font-family:"Nunito",sans-serif;font-size:1.875rem;font-weight:900}
-  .bonus .desc{margin-top:.75rem;color:var(--muted-foreground)}
-  .bonus .value{margin-top:1rem;font-size:1.125rem}
-  .bonus .value s{color:var(--muted-foreground)}
-  .bonus .value strong{color:var(--primary)}
-
-  /* Planos */
-  .plans{display:grid;align-items:stretch;gap:1.5rem}
-  @media(min-width:768px){.plans{grid-template-columns:1fr 1fr}}
-  .plan{display:flex;flex-direction:column;border-radius:1.5rem;border:1px solid var(--border);background:var(--card);padding:1.75rem;box-shadow:var(--shadow-card)}
-  .plan h3{font-family:"Nunito",sans-serif;font-size:1.5rem;font-weight:900}
-  .plan ul{margin-top:1.25rem;flex:1;list-style:none}
-  .plan li{display:flex;gap:.75rem;margin-top:.625rem}
-  .plan li .check{color:var(--primary)}
-  .plan li.off{color:var(--muted-foreground);text-decoration:line-through}
-  .plan .buy{margin-top:1.5rem;text-align:center}
-  .plan .buy .big{font-family:"Nunito",sans-serif;font-size:3rem;font-weight:900}
-  .plan .buy .sub{margin-bottom:1rem;font-size:.875rem;color:var(--muted-foreground)}
-  .plan.featured{position:relative;border:4px solid var(--primary)}
-  @media(min-width:768px){.plan.featured{margin:-1rem 0}}
-  .plan.featured h3{color:var(--primary)}
-  .plan .ribbon{
-    position:absolute;top:-1rem;left:50%;transform:translateX(-50%);white-space:nowrap;
-    border-radius:9999px;background:var(--accent);color:var(--accent-foreground);
-    padding:.375rem 1rem;font-size:.75rem;font-weight:900;text-transform:uppercase;
-  }
-  .plan .buy .big-xl{font-family:"Nunito",sans-serif;font-size:3.75rem;font-weight:900;color:var(--primary)}
-  .plan .buy .note{margin-top:.75rem;font-size:.75rem;color:var(--muted-foreground)}
-  .btn-outline{
-    display:inline-flex;width:100%;align-items:center;justify-content:center;border-radius:9999px;
-    border:2px solid var(--primary);padding:1rem 1.5rem;font-family:"Nunito",sans-serif;font-weight:900;
-    text-transform:uppercase;color:var(--primary);transition:background .2s;
-  }
-  .btn-outline:hover{background:var(--soft-green)}
-
-  /* Garantia */
-  .guarantee-card{
-    margin:0 auto;max-width:48rem;border-radius:1.5rem;background:var(--card);
-    padding:2rem;text-align:center;box-shadow:var(--shadow-card);
-  }
-  @media(min-width:768px){.guarantee-card{padding:3rem}}
-  .guarantee-card .shield{font-size:3.75rem}
-  .guarantee-card h2{margin-top:1rem;font-family:"Nunito",sans-serif;font-size:1.875rem;font-weight:900}
-  .guarantee-card p{margin-top:1rem;color:var(--muted-foreground)}
-  .guarantee-card .cta-wrap{margin-top:3rem}
-
-  /* FAQ */
-  .faq{max-width:48rem;margin:0 auto}
-  .faq details{border:1px solid var(--border);border-radius:1rem;background:var(--card);padding:1.25rem;margin-top:.75rem}
-  .faq summary{display:flex;cursor:pointer;list-style:none;align-items:center;justify-content:space-between;font-weight:700}
-  .faq summary::-webkit-details-marker{display:none}
-  .faq summary .plus{color:var(--primary);transition:transform .2s}
-  .faq details[open] summary .plus{transform:rotate(45deg)}
-  .faq details p{margin-top:.75rem;color:var(--muted-foreground)}
-
-  /* Rodapé */
-  footer{border-top:1px solid var(--border);padding:2rem 1.25rem;text-align:center;font-size:.875rem;color:var(--muted-foreground)}
-
-</style>
+  <!-- CSS Compilado (Tailwind v4) — Não precisa alterar aqui -->
+  <style>
+    @layer properties;
+    @layer theme, base, components, utilities;
+    @layer theme {
+      :root, :host { --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; --color-black: #000; --spacing: 0.25rem; --container-sm: 24rem; --container-md: 28rem; --container-lg: 32rem; --container-2xl: 42rem; --container-3xl: 48rem; --container-4xl: 56rem; --container-5xl: 64rem; --text-xs: 0.75rem; --text-xs--line-height: calc(1 / 0.75); --text-sm: 0.875rem; --text-sm--line-height: calc(1.25 / 0.875); --text-base: 1rem; --text-base--line-height: calc(1.5 / 1); --text-lg: 1.125rem; --text-lg--line-height: calc(1.75 / 1.125); --text-xl: 1.25rem; --text-xl--line-height: calc(1.75 / 1.25); --text-2xl: 1.5rem; --text-2xl--line-height: calc(2 / 1.5); --text-3xl: 1.875rem; --text-3xl--line-height: calc(2.25 / 1.875); --text-4xl: 2.25rem; --text-4xl--line-height: calc(2.5 / 2.25); --text-5xl: 3rem; --text-5xl--line-height: 1; --text-6xl: 3.75rem; --text-6xl--line-height: 1; --text-7xl: 4.5rem; --text-7xl--line-height: 1; --font-weight-normal: 400; --font-weight-medium: 500; --font-weight-semibold: 600; --font-weight-bold: 700; --font-weight-extrabold: 800; --font-weight-black: 900; --tracking-tight: -0.025em; --tracking-wider: 0.05em; --tracking-widest: 0.1em; --leading-tight: 1.25; --leading-relaxed: 1.625; --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1); --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; --aspect-video: 16 / 9; --default-transition-duration: 150ms; --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); --default-font-family: "Inter", ui-sans-serif, system-ui, sans-serif; --default-mono-font-family: var(--font-mono); --color-background: var(--background); --color-foreground: var(--foreground); --color-border: var(--border); --font-display: "Nunito", ui-sans-serif, system-ui, sans-serif; --shadow-card: var(--shadow-card); }
+    }
+    @layer base {
+      *, ::after, ::before, ::backdrop, ::file-selector-button { box-sizing: border-box; margin: 0px; padding: 0px; border: 0px solid; }
+      html, :host { line-height: 1.5; text-size-adjust: 100%; tab-size: 4; font-family: var(--default-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif); -webkit-tap-highlight-color: transparent; }
+      h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
+      a { color: inherit; text-decoration: inherit; }
+      b, strong { font-weight: bolder; }
+      ol, ul, menu { list-style: none; }
+      img, svg, video, canvas, audio, iframe, embed, object { display: block; vertical-align: middle; }
+      img, video { max-width: 100%; height: auto; }
+      button, input, select, optgroup, textarea { font: inherit; letter-spacing: inherit; color: inherit; border-radius: 0px; background-color: transparent; opacity: 1; }
+      button, input:where([type="button"], [type="reset"], [type="submit"]) { appearance: button; }
+      summary { display: list-item; }
+    }
+    @layer utilities {
+      .absolute { position: absolute; }
+      .fixed { position: fixed; }
+      .relative { position: relative; }
+      .-top-4 { top: calc(var(--spacing) * -4); }
+      .top-\[40\%\] { top: 40%; }
+      .right-0 { right: 0px; }
+      .right-5 { right: calc(var(--spacing) * 5); }
+      .bottom-5 { bottom: calc(var(--spacing) * 5); }
+      .left-0 { left: 0px; }
+      .left-1\/2 { left: calc(50%); }
+      .z-50 { z-index: 50; }
+      .order-1 { order: 1; }
+      .order-2 { order: 2; }
+      .mx-auto { margin-inline: auto; }
+      .mt-1 { margin-top: var(--spacing); }
+      .mt-2 { margin-top: calc(var(--spacing) * 2); }
+      .mt-3 { margin-top: calc(var(--spacing) * 3); }
+      .mt-4 { margin-top: calc(var(--spacing) * 4); }
+      .mt-5 { margin-top: calc(var(--spacing) * 5); }
+      .mt-6 { margin-top: calc(var(--spacing) * 6); }
+      .mt-8 { margin-top: calc(var(--spacing) * 8); }
+      .mt-10 { margin-top: calc(var(--spacing) * 10); }
+      .mt-12 { margin-top: calc(var(--spacing) * 12); }
+      .mt-14 { margin-top: calc(var(--spacing) * 14); }
+      .mt-16 { margin-top: calc(var(--spacing) * 16); }
+      .mb-2 { margin-bottom: calc(var(--spacing) * 2); }
+      .mb-3 { margin-bottom: calc(var(--spacing) * 3); }
+      .mb-4 { margin-bottom: calc(var(--spacing) * 4); }
+      .mb-5 { margin-bottom: calc(var(--spacing) * 5); }
+      .mb-8 { margin-bottom: calc(var(--spacing) * 8); }
+      .mb-10 { margin-bottom: calc(var(--spacing) * 10); }
+      .btn-cta {
+        display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+        width: 100%; max-width: 32rem; padding: 1.1rem 1.5rem; border-radius: 9999px;
+        background: var(--primary); color: var(--primary-foreground);
+        font-family: var(--font-display); font-weight: 900; font-size: 1.15rem;
+        text-transform: uppercase; box-shadow: var(--shadow-cta);
+        transition: transform 0.2s, background 0.2s;
+        animation: 2.2s ease-in-out 0s infinite normal none running pulse-cta;
+      }
+      .btn-cta:hover { background: var(--primary-deep); transform: translateY(-2px); }
+      .block { display: block; }
+      .flex { display: flex; }
+      .grid { display: grid; }
+      .inline-block { display: inline-block; }
+      .inline-flex { display: inline-flex; }
+      .aspect-\[210\/297\] { aspect-ratio: 210 / 297; }
+      .aspect-square { aspect-ratio: 1 / 1; }
+      .h-2\.5 { height: calc(var(--spacing) * 2.5); }
+      .h-14 { height: calc(var(--spacing) * 14); }
+      .h-16 { height: calc(var(--spacing) * 16); }
+      .h-full { height: 100%; }
+      .w-2\.5 { width: calc(var(--spacing) * 2.5); }
+      .w-6 { width: calc(var(--spacing) * 6); }
+      .w-14 { width: calc(var(--spacing) * 14); }
+      .w-16 { width: calc(var(--spacing) * 16); }
+      .w-\[75\%\] { width: 75%; }
+      .w-fit { width: fit-content; }
+      .w-full { width: 100%; }
+      .max-w-2xl { max-width: var(--container-2xl); }
+      .max-w-3xl { max-width: var(--container-3xl); }
+      .max-w-4xl { max-width: var(--container-4xl); }
+      .max-w-5xl { max-width: var(--container-5xl); }
+      .max-w-md { max-width: var(--container-md); }
+      .flex-1 { flex: 1 1 0%; }
+      .shrink-0 { flex-shrink: 0; }
+      .-translate-x-1\/2 { --tw-translate-x: calc(calc(1 / 2 * 100%) * -1); translate: var(--tw-translate-x) var(--tw-translate-y); }
+      .translate-x-1\/2 { --tw-translate-x: calc(1 / 2 * 100%); translate: var(--tw-translate-x) var(--tw-translate-y); }
+      .animate-float { animation: 3s ease-in-out 0s infinite normal none running float-wa; }
+      .cursor-pointer { cursor: pointer; }
+      .snap-x { scroll-snap-type: x var(--tw-scroll-snap-strictness); }
+      .snap-mandatory { --tw-scroll-snap-strictness: mandatory; }
+      .snap-center { scroll-snap-align: center; }
+      .scroll-mt-4 { scroll-margin-top: calc(var(--spacing) * 4); }
+      .\[scrollbar-width\:none\] { scrollbar-width: none; }
+      .list-none { list-style-type: none; }
+      .grid-cols-2 { grid-template-columns: repeat(2, minmax(0px, 1fr)); }
+      .flex-col { flex-direction: column; }
+      .items-center { align-items: center; }
+      .items-start { align-items: flex-start; }
+      .items-stretch { align-items: stretch; }
+      .justify-between { justify-content: space-between; }
+      .justify-center { justify-content: center; }
+      .gap-2 { gap: calc(var(--spacing) * 2); }
+      .gap-3 { gap: calc(var(--spacing) * 3); }
+      .gap-4 { gap: calc(var(--spacing) * 4); }
+      .gap-5 { gap: calc(var(--spacing) * 5); }
+      .gap-8 { gap: calc(var(--spacing) * 8); }
+      .gap-12 { gap: calc(var(--spacing) * 12); }
+      :where(.space-y-2\.5 > :not(:last-child)) { margin-block-end: calc(var(--spacing) * 2.5); }
+      :where(.space-y-3 > :not(:last-child)) { margin-block-end: calc(var(--spacing) * 3); }
+      .overflow-hidden { overflow: hidden; }
+      .overflow-x-auto { overflow-x: auto; }
+      .rounded-2xl { border-radius: calc(var(--radius) + 8px); }
+      .rounded-3xl { border-radius: calc(var(--radius) + 12px); }
+      .rounded-\[2rem\] { border-radius: 2rem; }
+      .rounded-full { border-radius: 9999px; }
+      .border { border-style: solid; border-width: 1px; }
+      .border-2 { border-style: solid; border-width: 2px; }
+      .border-4 { border-style: solid; border-width: 4px; }
+      .border-t { border-top-style: solid; border-top-width: 1px; }
+      .border-dashed { border-style: dashed; }
+      .border-accent { border-color: var(--accent); }
+      .border-primary { border-color: var(--primary); }
+      .bg-accent { background-color: var(--accent); }
+      .bg-background { background-color: var(--background); }
+      .bg-border { background-color: var(--border); }
+      .bg-card { background-color: var(--card); }
+      .bg-muted { background-color: var(--muted); }
+      .bg-primary { background-color: var(--primary); }
+      .bg-soft-green { background-color: var(--soft-green); }
+      .object-contain { object-fit: contain; }
+      .object-cover { object-fit: cover; }
+      .p-3 { padding: calc(var(--spacing) * 3); }
+      .p-4 { padding: calc(var(--spacing) * 4); }
+      .p-5 { padding: calc(var(--spacing) * 5); }
+      .p-6 { padding: calc(var(--spacing) * 6); }
+      .p-7 { padding: calc(var(--spacing) * 7); }
+      .p-8 { padding: calc(var(--spacing) * 8); }
+      .px-4 { padding-inline: calc(var(--spacing) * 4); }
+      .px-5 { padding-inline: calc(var(--spacing) * 5); }
+      .px-6 { padding-inline: calc(var(--spacing) * 6); }
+      .py-1\.5 { padding-block: calc(var(--spacing) * 1.5); }
+      .py-2 { padding-block: calc(var(--spacing) * 2); }
+      .py-2\.5 { padding-block: calc(var(--spacing) * 2.5); }
+      .py-3 { padding-block: calc(var(--spacing) * 3); }
+      .py-4 { padding-block: calc(var(--spacing) * 4); }
+      .py-8 { padding-block: calc(var(--spacing) * 8); }
+      .py-16 { padding-block: calc(var(--spacing) * 16); }
+      .pt-10 { padding-top: calc(var(--spacing) * 10); }
+      .pb-4 { padding-bottom: calc(var(--spacing) * 4); }
+      .pb-14 { padding-bottom: calc(var(--spacing) * 14); }
+      .text-center { text-align: center; }
+      .font-display { font-family: Nunito, ui-sans-serif, system-ui, sans-serif; }
+      .font-sans { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+      .text-2xl { font-size: var(--text-2xl); line-height: var(--text-2xl--line-height); }
+      .text-3xl { font-size: var(--text-3xl); line-height: var(--text-3xl--line-height); }
+      .text-4xl { font-size: var(--text-4xl); line-height: var(--text-4xl--line-height); }
+      .text-5xl { font-size: var(--text-5xl); line-height: var(--text-5xl--line-height); }
+      .text-6xl { font-size: var(--text-6xl); line-height: var(--text-6xl--line-height); }
+      .text-lg { font-size: var(--text-lg); line-height: var(--text-lg--line-height); }
+      .text-sm { font-size: var(--text-sm); line-height: var(--text-sm--line-height); }
+      .text-xl { font-size: var(--text-xl); line-height: var(--text-xl--line-height); }
+      .text-xs { font-size: var(--text-xs); line-height: var(--text-xs--line-height); }
+      .leading-none { line-height: 1; }
+      .leading-tight { line-height: var(--leading-tight); }
+      .font-black { font-weight: 900; }
+      .font-bold { font-weight: 700; }
+      .font-extrabold { font-weight: 800; }
+      .font-medium { font-weight: 500; }
+      .font-semibold { font-weight: 600; }
+      .tracking-wider { letter-spacing: 0.05em; }
+      .whitespace-nowrap { white-space: nowrap; }
+      .text-accent-foreground { color: var(--accent-foreground); }
+      .text-foreground { color: var(--foreground); }
+      .text-muted-foreground { color: var(--muted-foreground); }
+      .text-primary { color: var(--primary); }
+      .text-primary-deep { color: var(--primary-deep); }
+      .text-primary-foreground { color: var(--primary-foreground); }
+      .uppercase { text-transform: uppercase; }
+      .line-through { text-decoration-line: line-through; }
+      .shadow-card { box-shadow: var(--shadow-card); }
+      .transition-all { transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1); }
+      .transition-colors { transition: color, background-color, border-color 150ms cubic-bezier(0.4, 0, 0.2, 1); }
+      .transition-transform { transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1); }
+      .group-open\:rotate-45:is(:where(.group):is([open], :popover-open, :open) *) { rotate: 45deg; }
+      @media (hover: hover) {
+        .hover\:-translate-y-1:hover { --tw-translate-y: calc(var(--spacing) * -1); translate: var(--tw-translate-x) var(--tw-translate-y); }
+        .hover\:bg-soft-green:hover { background-color: var(--soft-green); }
+      }
+      @media (width >= 40rem) {
+        .sm\:w-\[45\%\] { width: 45%; }
+        .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0px, 1fr)); }
+        .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0px, 1fr)); }
+      }
+      @media (width >= 48rem) {
+        .md\:order-1 { order: 1; }
+        .md\:order-2 { order: 2; }
+        .md\:-my-4 { margin-block: calc(var(--spacing) * -4); }
+        .md\:mt-14 { margin-top: calc(var(--spacing) * 14); }
+        .md\:mt-16 { margin-top: calc(var(--spacing) * 16); }
+        .md\:mt-20 { margin-top: calc(var(--spacing) * 20); }
+        .md\:w-\[30\%\] { width: 30%; }
+        .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0px, 1fr)); }
+        .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0px, 1fr)); }
+        .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0px, 1fr)); }
+        .md\:gap-16 { gap: calc(var(--spacing) * 16); }
+        .md\:p-10 { padding: calc(var(--spacing) * 10); }
+        .md\:p-12 { padding: calc(var(--spacing) * 12); }
+        .md\:py-24 { padding-block: calc(var(--spacing) * 24); }
+        .md\:pt-14 { padding-top: calc(var(--spacing) * 14); }
+        .md\:text-4xl { font-size: var(--text-4xl); line-height: var(--text-4xl--line-height); }
+        .md\:text-5xl { font-size: var(--text-5xl); line-height: var(--text-5xl--line-height); }
+      }
+    }
+    :root {
+      --radius: 1rem;
+      --background: oklch(1 0 0);
+      --foreground: oklch(0.2 0.02 260);
+      --card: oklch(1 0 0);
+      --card-foreground: oklch(0.2 0.02 260);
+      --primary: oklch(0.62 0.17 148);
+      --primary-foreground: oklch(1 0 0);
+      --primary-deep: oklch(0.5 0.15 148);
+      --secondary: oklch(0.975 0.006 90);
+      --muted: oklch(0.975 0.006 90);
+      --muted-foreground: oklch(0.37 0.03 260);
+      --accent: oklch(0.52 0.2 355);
+      --accent-foreground: oklch(1 0 0);
+      --soft-green: oklch(0.96 0.04 148);
+      --border: oklch(0.92 0.01 90);
+      --shadow-card: 0 10px 30px -12px oklch(0.2 0.02 260 / 0.18);
+      --shadow-cta: 0 12px 28px -8px oklch(0.62 0.17 148 / 0.55);
+    }
+    @layer base {
+      * { border-color: var(--border); }
+      html { scroll-behavior: smooth; }
+      body { background-color: var(--background); color: var(--foreground); }
+    }
+    @keyframes pulse-cta {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+    @keyframes float-wa {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+  </style>
 </head>
+
 <body>
+  <main class="font-sans text-foreground">
 
-<div class="topbar">🚨 OFERTA PROMOCIONAL ATIVA HOJE — <span id="data-hoje"></span></div>
+    <!-- =================================================================
+         1. BARRA DE URGÊNCIA NO TOPO (Data atualizada via JS no final)
+    ================================================================== -->
+    <div class="bg-accent px-4 py-2.5 text-center text-sm font-bold text-accent-foreground">
+      🚨 OFERTA PROMOCIONAL ATIVA HOJE — 20/11/2026
+    </div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container" style="max-width:56rem">
-    <p class="badge">✅ Entrega imediata por e-mail &nbsp;|&nbsp; 🛡️ Garantia de 7 dias</p>
-    <h1>A maneira <span class="text-primary">mais fácil e divertida</span> de ensinar a <span class="text-primary">Bíblia</span> para as crianças <span class="text-muted">(e tirá-las da frente das telas!)</span></h1>
-    <img src="img/hero-kit.webp" alt="Kit Tesouros do Céu com atividades bíblicas" width="1280" height="960">
-    <p class="lead">❤️ Atividades bíblicas para imprimir que ensinam valores cristãos de forma leve, prática e divertida para crianças de 3 a 10 anos.</p>
+    <!-- =================================================================
+         2. PRIMEIRA DOBRA (HERO SECTION)
+    ================================================================== -->
+    <section class="px-5 pb-14 pt-10 text-center md:pt-14">
+      <div class="mx-auto max-w-4xl">
+        <p class="mb-4 inline-block rounded-full bg-soft-green px-4 py-1.5 text-sm font-semibold text-primary-deep">
+          ✅ Entrega imediata por e-mail &nbsp;|&nbsp; 🛡️ Garantia de 7 dias
+        </p>
 
-    <div class="price-card">
-      <p class="label">a partir de</p>
-      <p class="price">R$14,90</p>
-      <p class="price-sub">Pagamento único no PIX ou cartão</p>
-      <a href="#planos" class="btn-cta">Ver as opções</a>
-      <p class="guarantee">🛡️ Se não gostar, devolvemos 100% em até 7 dias</p>
-      <div class="perks">
-        <span>🔒 Acesso vitalício</span><span>✅ Pagamento seguro</span><span>🛡️ Garantia de 7 dias</span>
-      </div>
-    </div>
-    <p class="next-step">Na próxima tela você informa nome, e-mail, celular e CPF (o CPF é exigido pelo meio de pagamento). Leva cerca de 1 minuto e o material chega no seu e-mail.</p>
-  </div>
-</section>
+        <h1 class="font-display text-3xl font-black leading-tight md:text-5xl">
+          A maneira <span class="text-primary">mais fácil e divertida</span> de ensinar a
+          <span class="text-primary">Bíblia</span> para as crianças
+          <span class="text-muted-foreground">(e tirá-las da frente das telas!)</span>
+        </h1>
 
-<!-- COMO FUNCIONA -->
-<section class="section alt">
-  <div class="container">
-    <div class="title-block">
-      <p class="eyebrow">Simples e rápido</p>
-      <h2>Como funciona o acesso do kit?</h2>
-      <p class="sub">Em poucos minutos você já está com tudo pronto para usar.</p>
-    </div>
-    <div class="grid cols-3">
-      <div class="card center">
-        <div class="icon-circle">📩</div>
-        <p class="step">1. Passo</p>
-        <h3>Chega no seu e-mail</h3>
-        <p>Após a compra, você recebe o acesso imediato aos materiais em PDF.</p>
-      </div>
-      <div class="card center">
-        <div class="icon-circle">🖨️</div>
-        <p class="step">2. Passo</p>
-        <h3>Você imprime</h3>
-        <p>Imprima no seu ritmo e quantas vezes quiser as atividades favoritas.</p>
-      </div>
-      <div class="card center">
-        <div class="icon-circle">🌱</div>
-        <p class="step">3. Passo</p>
-        <h3>Ajuda seu filho a crescer</h3>
-        <p>Momentos de qualidade longe das telas e aprendendo valores reais.</p>
-      </div>
-    </div>
-  </div>
-</section>
+        <p class="mt-10 text-sm font-bold uppercase tracking-wider text-primary md:mt-14">
+          Veja o material por dentro 👇
+        </p>
 
-<!-- KIT -->
-<section class="section">
-  <div class="container">
-    <div class="title-block">
-      <p class="eyebrow">Acesso imediato</p>
-      <h2>O que você vai receber no kit</h2>
-      <p class="sub">Livros ilustrados prontos para imprimir e aplicar.</p>
-    </div>
-    <div class="kit-grid">
-      <figure class="kit-item"><img src="img/Design_sem_nome__2_-removebg-preview.webp" alt="Ovelha Jesus" loading="lazy"><figcaption>Ovelha Jesus</figcaption></figure>
-      <figure class="kit-item"><img src="img/Design_sem_nome__3_-removebg-preview.webp" alt="Aventuras Bíblicas" loading="lazy"><figcaption>Aventuras Bíblicas</figcaption></figure>
-      <figure class="kit-item"><img src="img/Design_sem_nome__4_-removebg-preview.webp" alt="Passatempos" loading="lazy"><figcaption>Passatempos</figcaption></figure>
-      <figure class="kit-item"><img src="img/Design_sem_nome__5_-removebg-preview.webp" alt="Cultivando Valores" loading="lazy"><figcaption>Cultivando Valores</figcaption></figure>
-      <figure class="kit-item"><img src="img/Design_sem_nome__6_-removebg-preview.webp" alt="Alfabeto" loading="lazy"><figcaption>Alfabeto</figcaption></figure>
-      <figure class="kit-item"><img src="img/Design_sem_nome__7_-removebg-preview.webp" alt="Heróis de Deus" loading="lazy"><figcaption>Heróis de Deus</figcaption></figure>
-      <figure class="kit-item"><img src="img/Design_sem_nome__8_-removebg-preview.webp" alt="Atividades Bíblicas" loading="lazy"><figcaption>Atividades Bíblicas</figcaption></figure>
-      <figure class="kit-item"><img src="img/Design_sem_nome__9_-removebg-preview.webp" alt="Atividades para Crianças" loading="lazy"><figcaption>Atividades para Crianças</figcaption></figure>
-      <figure class="kit-item"><img src="img/Design_sem_nome__10_-removebg-preview.webp" alt="Colorindo" loading="lazy"><figcaption>Colorindo</figcaption></figure>
-      <figure class="kit-item"><img src="img/Design_sem_nome__11_-removebg-preview.webp" alt="Animais" loading="lazy"><figcaption>Animais</figcaption></figure>
-      <figure class="kit-item"><img src="img/Design_sem_nome__12_-removebg-preview.webp" alt="Bíblia Ilustrada" loading="lazy"><figcaption>Bíblia Ilustrada</figcaption></figure>
-      <div class="kit-more">
-        <p class="big">+11</p>
-        <p class="small">livros completos</p>
-      </div>
-    </div>
-    <div class="mt-16 md:mt-20 cta-wrap">
-      <a href="#planos" class="btn-cta">Sim! Quero esse material</a>
-      <p class="cta-note">🛡️ Garantia de 7 dias &nbsp;|&nbsp; 🔒 Pagamento seguro por PIX ou cartão</p>
-    </div>
-  </div>
-</section>
+        <!-- DICA: Se quiser colocar vídeo aqui, substitua a tag <img> por:
+             <video src="video/demonstracao.mp4" autoplay muted loop playsinline class="h-full w-full object-cover"></video> -->
+        <div class="mx-auto mt-3 aspect-square w-full max-w-md overflow-hidden rounded-3xl bg-muted shadow-card">
+          <video src="./demonstracao.mp4" autoplay muted loop playsinline class="h-full w-full object-cover"></video>
+        </div>
 
-<!-- MENOS TELAS -->
-<section class="section alt">
-  <div class="container">
-    <div class="split">
-      <div>
-        <h2>Menos telas. <span class="text-primary">Mais Palavra de Deus.</span></h2>
-        <ul class="check-list">
-          <li><span class="check">✔</span><span>Atividades prontas, sem horas procurando na internet.</span></li>
-          <li><span class="check">✔</span><span>Colorir, passatempos, alfabeto e heróis da fé no mesmo kit.</span></li>
-          <li><span class="check">✔</span><span>Valores cristãos ensinados de forma divertida.</span></li>
-          <li><span class="check">✔</span><span>PDF para imprimir em casa ou na gráfica, quantas vezes quiser.</span></li>
-          <li><span class="check">✔</span><span>Momentos de qualidade em família, longe do celular.</span></li>
-        </ul>
-      </div>
-      <div class="quote-card">
-        <p class="q">Quanto tempo seu filho passa na frente das telas por dia?</p>
-        <p>Troque parte desse tempo por atividades que ensinam fé, amor e bons valores.</p>
-      </div>
-    </div>
-  </div>
-</section>
+        <p class="mx-auto mt-8 max-w-2xl text-lg text-muted-foreground">
+          ❤️ Atividades bíblicas para imprimir que ensinam valores cristãos de forma leve, prática e divertida para crianças de 3 a 10 anos.
+        </p>
 
-<!-- DEPOIMENTOS -->
-<section class="section">
-  <div class="container">
-    <div class="title-block">
-      <p class="eyebrow">Quem já comprou</p>
-      <h2>O que as mamães estão dizendo</h2>
-      <p class="sub">Mensagens reais de famílias que já estão usando o kit.</p>
-    </div>
-    <div class="testimonials">
-      <figure><img src="img/feedback-amanda.webp" alt="Conversa no WhatsApp com a Amanda: o filho largou o celular e agora pede atividades do kit" loading="lazy"></figure>
-      <figure><img src="img/feedback-jessica.webp" alt="Conversa no WhatsApp com a Jessica: a filha ficou animada com as atividades impressas" loading="lazy"></figure>
-    </div>
-    <div class="mt-16 md:mt-20 cta-wrap">
-      <a href="#planos" class="btn-cta">Quero esse resultado na minha casa</a>
-      <p class="cta-note">🛡️ Garantia de 7 dias &nbsp;|&nbsp; 🔒 Pagamento seguro por PIX ou cartão</p>
-    </div>
-  </div>
-</section>
-
-<!-- PARA QUEM -->
-<section class="section alt">
-  <div class="container">
-    <div class="title-block"><h2>Feito para você que é</h2></div>
-    <div class="grid cols-3">
-      <div class="card">
-        <div style="font-size:2.25rem">👨‍👩‍👧</div>
-        <h3 style="margin-top:.75rem">Pais e Mães</h3>
-        <p>Que buscam tirar os filhos das telas com atividades construtivas.</p>
-      </div>
-      <div class="card">
-        <div style="font-size:2.25rem">📚</div>
-        <h3 style="margin-top:.75rem">Educadores</h3>
-        <p>Que precisam de material de apoio rico em valores éticos.</p>
-      </div>
-      <div class="card">
-        <div style="font-size:2.25rem">⛪</div>
-        <h3 style="margin-top:.75rem">Ministérios Infantis</h3>
-        <p>Excelente recurso para escola bíblica e grupos de crianças.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BÔNUS -->
-<section class="section">
-  <div class="container">
-    <div class="bonus">
-      <p class="tag">🔥 Bônus incluso no kit</p>
-      <div class="split">
-        <img src="img/Gemini_Generated2.webp" alt="E-book bônus Aprendendo com Alegria" loading="lazy">
-        <div>
-          <h3>E-book Aprendendo com Alegria</h3>
-          <p class="desc">Junto com o kit, você recebe mais um material completo para reforçar os ensinamentos de Jesus de forma divertida. Chega no mesmo e-mail de entrega.</p>
-          <p class="value">Valor: <s>R$19,90</s> <strong>GRÁTIS no Kit Completo</strong></p>
+        <div class="mt-10">
+          <div class="flex flex-col items-center gap-4">
+            <a href="#oferta" class="btn-cta">Quero garantir o kit agora</a>
+            <p class="text-sm text-muted-foreground">🛡️ Garantia de 7 dias &nbsp;|&nbsp; 🔒 Pagamento seguro por PIX ou cartão</p>
+          </div>
         </div>
       </div>
-      <div class="mt-14 md:mt-16 cta-wrap">
-        <a href="#planos" class="btn-cta">Quero o kit + bônus</a>
-        <p class="cta-note">🛡️ Garantia de 7 dias &nbsp;|&nbsp; 🔒 Pagamento seguro por PIX ou cartão</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- PLANOS -->
-<section id="planos" class="section alt" style="scroll-margin-top:1rem">
-  <div class="container">
-    <div class="title-block">
-      <p class="eyebrow">Escolha sua opção</p>
-      <h2>Escolha o seu kit</h2>
-      <p class="sub">Pagamento único, acesso vitalício e garantia de 7 dias nas duas opções.</p>
-    </div>
-    <div class="plans">
-      <div class="plan">
-        <h3>Kit Básico</h3>
-        <ul>
-          <li><span class="check">✔</span>Kit completo Tesouros do Céu (11 livros em PDF)</li>
-          <li><span class="check">✔</span>Acesso imediato por e-mail</li>
-          <li><span class="check">✔</span>Imprima quantas vezes quiser</li>
-          <li><span class="check">✔</span>Garantia de 7 dias</li>
-          <li class="off"><span>✖</span>5 livros bônus exclusivos</li>
-          <li class="off"><span>✖</span>E-book Aprendendo com Alegria</li>
-        </ul>
-        <div class="buy">
-          <p class="big">R$14,90</p>
-          <p class="sub">pagamento único</p>
-          <!-- TODO: trocar pelo link da Cakto da oferta básica de R$19,90 -->
-          <a href="https://pay.cakto.com.br/35p3gjy" class="btn-outline">Quero o básico</a>
+    <!-- =================================================================
+         3. COMO FUNCIONA O ACESSO (3 PASSOS)
+    ================================================================== -->
+    <section class="bg-muted px-5 py-16 md:py-24">
+      <div class="mx-auto max-w-5xl">
+        <div class="mb-10 text-center">
+          <p class="mb-2 text-sm font-bold uppercase tracking-wider text-primary">Simples e rápido</p>
+          <h2 class="font-display text-3xl font-black uppercase leading-tight md:text-5xl">Como funciona o acesso do kit?</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">Em poucos minutos você já está com tudo pronto para usar.</p>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-3">
+          <div class="rounded-3xl bg-card p-7 text-center shadow-card">
+            <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-soft-green text-3xl">📩</div>
+            <p class="text-sm font-bold uppercase text-primary">1. Passo</p>
+            <h3 class="mt-1 font-display text-xl font-extrabold">Chega no seu e-mail</h3>
+            <p class="mt-2 text-muted-foreground">Após a compra, você recebe o acesso imediato aos materiais em PDF.</p>
+          </div>
+
+          <div class="rounded-3xl bg-card p-7 text-center shadow-card">
+            <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-soft-green text-3xl">🖨️</div>
+            <p class="text-sm font-bold uppercase text-primary">2. Passo</p>
+            <h3 class="mt-1 font-display text-xl font-extrabold">Você imprime</h3>
+            <p class="mt-2 text-muted-foreground">Imprima no seu ritmo e quantas vezes quiser as atividades favoritas.</p>
+          </div>
+
+          <div class="rounded-3xl bg-card p-7 text-center shadow-card">
+            <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-soft-green text-3xl">🌱</div>
+            <p class="text-sm font-bold uppercase text-primary">3. Passo</p>
+            <h3 class="mt-1 font-display text-xl font-extrabold">Ajuda seu filho a crescer</h3>
+            <p class="mt-2 text-muted-foreground">Momentos de qualidade longe das telas e aprendendo valores reais.</p>
+          </div>
         </div>
       </div>
-      <div class="plan featured">
-        <span class="ribbon">⭐ Mais escolhido</span>
-        <h3>Kit Completo + Bônus</h3>
-        <ul>
-          <li><span class="check">✔</span>Kit completo Tesouros do Céu (11 livros em PDF)</li>
-          <li><span class="check">✔</span>🎁 +5 livros bônus exclusivos</li>
-          <li><span class="check">✔</span>🎁 E-book Aprendendo com Alegria</li>
-          <li><span class="check">✔</span>Acesso imediato por e-mail</li>
-          <li><span class="check">✔</span>Imprima quantas vezes quiser</li>
-          <li><span class="check">✔</span>Garantia de 7 dias</li>
-        </ul>
-        <div class="buy">
-          <p class="text-muted"><s>De R$149,90</s></p>
-          <p class="big-xl">R$24,90</p>
-          <p class="sub">pagamento único no PIX ou cartão</p>
-          <a href="https://pay.cakto.com.br/pden9g7_420551" class="btn-cta">Quero o completo</a>
-          <p class="note">Por apenas R$10 a mais você leva 5 livros extras</p>
+    </section>
+
+    <!-- =================================================================
+         4. O QUE VOCÊ VAI RECEBER NO KIT (GRADE DOS 11 MÓDULOS)
+    ================================================================== -->
+    <section class="bg-background px-5 py-16 md:py-24">
+      <div class="mx-auto max-w-5xl">
+        <div class="mb-10 text-center">
+          <p class="mb-2 text-sm font-bold uppercase tracking-wider text-primary">Acesso imediato</p>
+          <h2 class="font-display text-3xl font-black uppercase leading-tight md:text-5xl">O que você vai receber no kit</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">Livros ilustrados prontos para imprimir e aplicar.</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4">
+          <figure class="rounded-3xl bg-muted p-4 text-center transition-transform hover:-translate-y-1">
+            <img src="img/Design_sem_nome__2_-removebg-preview.webp" alt="Ovelha Jesus" loading="lazy" class="mx-auto aspect-square w-full object-contain">
+            <figcaption class="mt-2 text-sm font-bold">Ovelha Jesus</figcaption>
+          </figure>
+
+          <figure class="rounded-3xl bg-muted p-4 text-center transition-transform hover:-translate-y-1">
+            <img src="img/Design_sem_nome__3_-removebg-preview.webp" alt="Aventuras Bíblicas" loading="lazy" class="mx-auto aspect-square w-full object-contain">
+            <figcaption class="mt-2 text-sm font-bold">Aventuras Bíblicas</figcaption>
+          </figure>
+
+          <figure class="rounded-3xl bg-muted p-4 text-center transition-transform hover:-translate-y-1">
+            <img src="img/Design_sem_nome__4_-removebg-preview.webp" alt="Passatempos" loading="lazy" class="mx-auto aspect-square w-full object-contain">
+            <figcaption class="mt-2 text-sm font-bold">Passatempos</figcaption>
+          </figure>
+
+          <figure class="rounded-3xl bg-muted p-4 text-center transition-transform hover:-translate-y-1">
+            <img src="img/Design_sem_nome__5_-removebg-preview.webp" alt="Cultivando Valores" loading="lazy" class="mx-auto aspect-square w-full object-contain">
+            <figcaption class="mt-2 text-sm font-bold">Cultivando Valores</figcaption>
+          </figure>
+
+          <figure class="rounded-3xl bg-muted p-4 text-center transition-transform hover:-translate-y-1">
+            <img src="img/Design_sem_nome__6_-removebg-preview.webp" alt="Alfabeto" loading="lazy" class="mx-auto aspect-square w-full object-contain">
+            <figcaption class="mt-2 text-sm font-bold">Alfabeto</figcaption>
+          </figure>
+
+          <figure class="rounded-3xl bg-muted p-4 text-center transition-transform hover:-translate-y-1">
+            <img src="img/Design_sem_nome__7_-removebg-preview.webp" alt="Heróis de Deus" loading="lazy" class="mx-auto aspect-square w-full object-contain">
+            <figcaption class="mt-2 text-sm font-bold">Heróis de Deus</figcaption>
+          </figure>
+
+          <figure class="rounded-3xl bg-muted p-4 text-center transition-transform hover:-translate-y-1">
+            <img src="img/Design_sem_nome__8_-removebg-preview.webp" alt="Atividades Bíblicas" loading="lazy" class="mx-auto aspect-square w-full object-contain">
+            <figcaption class="mt-2 text-sm font-bold">Atividades Bíblicas</figcaption>
+          </figure>
+
+          <figure class="rounded-3xl bg-muted p-4 text-center transition-transform hover:-translate-y-1">
+            <img src="img/Design_sem_nome__9_-removebg-preview.webp" alt="Atividades para Crianças" loading="lazy" class="mx-auto aspect-square w-full object-contain">
+            <figcaption class="mt-2 text-sm font-bold">Atividades para Crianças</figcaption>
+          </figure>
+
+          <figure class="rounded-3xl bg-muted p-4 text-center transition-transform hover:-translate-y-1">
+            <img src="img/Design_sem_nome__10_-removebg-preview.webp" alt="Colorindo" loading="lazy" class="mx-auto aspect-square w-full object-contain">
+            <figcaption class="mt-2 text-sm font-bold">Colorindo</figcaption>
+          </figure>
+
+          <figure class="rounded-3xl bg-muted p-4 text-center transition-transform hover:-translate-y-1">
+            <img src="img/Design_sem_nome__11_-removebg-preview.webp" alt="Animais" loading="lazy" class="mx-auto aspect-square w-full object-contain">
+            <figcaption class="mt-2 text-sm font-bold">Animais</figcaption>
+          </figure>
+
+          <figure class="rounded-3xl bg-muted p-4 text-center transition-transform hover:-translate-y-1">
+            <img src="img/Design_sem_nome__12_-removebg-preview.webp" alt="Bíblia Ilustrada" loading="lazy" class="mx-auto aspect-square w-full object-contain">
+            <figcaption class="mt-2 text-sm font-bold">Bíblia Ilustrada</figcaption>
+          </figure>
+
+          <div class="flex flex-col items-center justify-center rounded-3xl bg-primary p-4 text-center text-primary-foreground">
+            <p class="font-display text-4xl font-black">+11</p>
+            <p class="text-sm font-bold">livros completos</p>
+          </div>
+        </div>
+
+        <div class="mt-16 md:mt-20">
+          <div class="flex flex-col items-center gap-4">
+            <a href="#oferta" class="btn-cta">Sim! Quero esse material</a>
+            <p class="text-sm text-muted-foreground">🛡️ Garantia de 7 dias &nbsp;|&nbsp; 🔒 Pagamento seguro por PIX ou cartão</p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- GARANTIA -->
-<section class="section alt">
-  <div class="container">
-    <div class="guarantee-card">
-      <div class="shield">🛡️</div>
-      <h2>Garantia de 7 dias: satisfação ou seu dinheiro de volta</h2>
-      <p>Você tem 7 dias para avaliar o material. Se achar que as atividades não agregaram na rotina da sua família ou que seu filho não engajou, nós devolvemos 100% do seu investimento. Sem burocracia: é só pedir pelo WhatsApp ou pelo e-mail da compra.</p>
-      <div class="cta-wrap">
-        <a href="#planos" class="btn-cta">Ver opções a partir de R$ 14,90</a>
-        <p class="cta-note">🛡️ Garantia de 7 dias &nbsp;|&nbsp; 🔒 Pagamento seguro por PIX ou cartão</p>
+    <!-- =================================================================
+         5. CARROSSEL DE PÁGINAS INTERNAS (SUBSTITUA OS SPANS POR IMAGENS)
+    ================================================================== -->
+    <section class="bg-muted px-5 py-16 md:py-24">
+      <div class="mx-auto max-w-5xl">
+        <div class="mb-10 text-center">
+          <p class="mb-2 text-sm font-bold uppercase tracking-wider text-primary">Por dentro do kit</p>
+          <h2 class="font-display text-3xl font-black uppercase leading-tight md:text-5xl">Espie por dentro das atividades</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">Algumas das páginas que seu filho vai colorir, resolver e aprender.</p>
+        </div>
+
+        <div class="relative">
+          <div class="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 [scrollbar-width:none]">
+            
+            <!-- Slide 1 -->
+            <figure class="w-[75%] shrink-0 snap-center sm:w-[45%] md:w-[30%]">
+              <div class="flex aspect-[210/297] items-center justify-center overflow-hidden rounded-2xl border bg-card shadow-card">
+                <!-- Troque o span abaixo por: <img src="img/amostra-1.webp" alt="Atividades de Colorir" class="h-full w-full object-cover"> -->
+                <img src="./img/01.jpeg" alt="">
+              </div>
+              <figcaption class="mt-3 text-center font-bold">Atividades de Colorir</figcaption>
+            </figure>
+
+            <!-- Slide 2 -->
+            <figure class="w-[75%] shrink-0 snap-center sm:w-[45%] md:w-[30%]">
+              <div class="flex aspect-[210/297] items-center justify-center overflow-hidden rounded-2xl border bg-card shadow-card">
+                <img src="./img/02.jpeg" alt="">
+              </div>
+              <figcaption class="mt-3 text-center font-bold">Passatempos</figcaption>
+            </figure>
+
+            <!-- Slide 3 -->
+            <figure class="w-[75%] shrink-0 snap-center sm:w-[45%] md:w-[30%]">
+              <div class="flex aspect-[210/297] items-center justify-center overflow-hidden rounded-2xl border bg-card shadow-card">
+                <img src="./img/03.jpeg" alt="">
+              </div>
+              <figcaption class="mt-3 text-center font-bold">Histórias Ilustradas</figcaption>
+            </figure>
+
+            <!-- Slide 4 -->
+            <figure class="w-[75%] shrink-0 snap-center sm:w-[45%] md:w-[30%]">
+              <div class="flex aspect-[210/297] items-center justify-center overflow-hidden rounded-2xl border bg-card shadow-card">
+                <img src="./img/04.jpeg" alt="">
+              </div>
+              <figcaption class="mt-3 text-center font-bold">Caça-Rédeas Bíblicas</figcaption>
+            </figure>
+
+            <!-- Slide 5 -->
+            <figure class="w-[75%] shrink-0 snap-center sm:w-[45%] md:w-[30%]">
+              <div class="flex aspect-[210/297] items-center justify-center overflow-hidden rounded-2xl border bg-card shadow-card">
+                <img src="./img/05.jpeg" alt="">
+              </div>
+              <figcaption class="mt-3 text-center font-bold">Alfabeto Bíblico</figcaption>
+            </figure>
+
+            <!-- Slide 6 -->
+            <figure class="w-[75%] shrink-0 snap-center sm:w-[45%] md:w-[30%]">
+              <div class="flex aspect-[210/297] items-center justify-center overflow-hidden rounded-2xl border bg-card shadow-card">
+                <img src="./img/06.jpeg" alt="">
+              </div>
+              <figcaption class="mt-3 text-center font-bold">Heróis da Fé</figcaption>
+            </figure>
+
+          </div>
+
+          <!-- Setas e bolinhas do carrossel -->
+          <button type="button" aria-label="Anterior" class="absolute left-0 top-[40%] -translate-x-1/2 rounded-full bg-primary p-3 font-black leading-none text-primary-foreground shadow-card">‹</button>
+          <button type="button" aria-label="Próximo" class="absolute right-0 top-[40%] translate-x-1/2 rounded-full bg-primary p-3 font-black leading-none text-primary-foreground shadow-card">›</button>
+          
+          <div class="mt-4 flex justify-center gap-2">
+            <button type="button" aria-label="Ir para Atividades de Colorir" class="h-2.5 rounded-full transition-all w-6 bg-primary"></button>
+            <button type="button" aria-label="Ir para Labirintos Bíblicos" class="h-2.5 rounded-full transition-all w-2.5 bg-border"></button>
+            <button type="button" aria-label="Ir para Histórias Ilustradas" class="h-2.5 rounded-full transition-all w-2.5 bg-border"></button>
+            <button type="button" aria-label="Ir para Passatempos" class="h-2.5 rounded-full transition-all w-2.5 bg-border"></button>
+            <button type="button" aria-label="Ir para Alfabeto Bíblico" class="h-2.5 rounded-full transition-all w-2.5 bg-border"></button>
+            <button type="button" aria-label="Ir para Heróis da Fé" class="h-2.5 rounded-full transition-all w-2.5 bg-border"></button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- FAQ -->
-<section class="section">
-  <div class="container">
-    <div class="title-block"><h2>Dúvidas frequentes</h2></div>
-    <div class="faq">
-      <details>
-        <summary>Como vou receber o material?<span class="plus">＋</span></summary>
-        <p>Todo o conteúdo é digital. Assim que o pagamento for aprovado, você receberá um e-mail com o link para baixar todos os arquivos em PDF.</p>
-      </details>
-      <details>
-        <summary>O pagamento é mensal ou único?<span class="plus">＋</span></summary>
-        <p>O pagamento é único, nas duas opções. Você não pagará nenhuma mensalidade e terá acesso vitalício aos livros.</p>
-      </details>
-      <details>
-        <summary>Para qual idade o material é recomendado?<span class="plus">＋</span></summary>
-        <p>As atividades foram pensadas para o desenvolvimento infantil, sendo ideais para crianças de 3 a 10 anos.</p>
-      </details>
-      <details>
-        <summary>Por que pedem meu CPF na hora de pagar?<span class="plus">＋</span></summary>
-        <p>O CPF é exigido pela plataforma de pagamento (Cakto) para gerar o PIX ou processar o cartão com segurança. Ele não é usado para outro fim por nós.</p>
-      </details>
-      <details>
-        <summary>E se eu não gostar do material?<span class="plus">＋</span></summary>
-        <p>Você tem 7 dias de garantia. Basta nos chamar no WhatsApp ou responder o e-mail da compra e devolvemos 100% do valor.</p>
-      </details>
-    </div>
-    <div class="mt-14 md:mt-16 cta-wrap">
-      <a href="#planos" class="btn-cta">Ver opções a partir de R$ 19,90</a>
-      <p class="cta-note">🛡️ Garantia de 7 dias &nbsp;|&nbsp; 🔒 Pagamento seguro por PIX ou cartão</p>
-    </div>
-  </div>
-</section>
+    <!-- =================================================================
+         6. BENEFÍCIOS (MENOS TELAS, MAIS PALAVRA DE DEUS)
+    ================================================================== -->
+    <section class="bg-muted px-5 py-16 md:py-24">
+      <div class="mx-auto max-w-5xl">
+        <div class="grid items-center gap-12 md:grid-cols-2 md:gap-16">
+          <div>
+            <h2 class="font-display text-3xl font-black uppercase leading-tight md:text-4xl">
+              Menos telas. <span class="text-primary">Mais Palavra de Deus.</span>
+            </h2>
+            <ul class="mt-6 space-y-3">
+              <li class="flex gap-3"><span class="text-primary">✔</span><span>Atividades prontas, sem horas procurando na internet.</span></li>
+              <li class="flex gap-3"><span class="text-primary">✔</span><span>Colorir, passatempos, alfabeto e heróis da fé no mesmo kit.</span></li>
+              <li class="flex gap-3"><span class="text-primary">✔</span><span>Valores cristãos ensinados de forma divertida.</span></li>
+              <li class="flex gap-3"><span class="text-primary">✔</span><span>PDF para imprimir em casa ou na gráfica, quantas vezes quiser.</span></li>
+              <li class="flex gap-3"><span class="text-primary">✔</span><span>Momentos de qualidade em família, longe do celular.</span></li>
+            </ul>
+          </div>
 
-<footer>© <span id="ano"></span> Tesouros do Céu. Todos os direitos reservados.</footer>
+          <div class="rounded-3xl bg-card p-8 text-center shadow-card">
+            <p class="font-display text-2xl font-extrabold">Quanto tempo seu filho passa na frente das telas por dia?</p>
+            <p class="mt-3 text-muted-foreground">Troque parte desse tempo por atividades que ensinam fé, amor e bons valores.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script>
-  document.getElementById('data-hoje').textContent = new Date().toLocaleDateString('pt-BR');
-  document.getElementById('ano').textContent = new Date().getFullYear();
-</script>
-<!-- Meta Pixel Code -->
+    <!-- =================================================================
+         7. PROVA SOCIAL (DEPOIMENTOS NO WHATSAPP)
+    ================================================================== -->
+    <section class="bg-background px-5 py-16 md:py-24">
+      <div class="mx-auto max-w-5xl">
+        <div class="mb-10 text-center">
+          <p class="mb-2 text-sm font-bold uppercase tracking-wider text-primary">Quem já comprou</p>
+          <h2 class="font-display text-3xl font-black uppercase leading-tight md:text-5xl">O que as mamães estão dizendo</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">Mensagens reais de famílias que já estão usando o kit.</p>
+        </div>
+
+        <!-- ATENÇÃO: Atualize os caminhos abaixo para a sua pasta local img/ se hospedar fora do Lovable -->
+        <div class="grid items-start gap-8 sm:grid-cols-2">
+          <figure class="overflow-hidden rounded-3xl border bg-card shadow-card">
+            <img src="./img/feedback-amanda.webp" alt="Conversa no WhatsApp com a Amanda" loading="lazy" class="w-full">
+          </figure>
+          <figure class="overflow-hidden rounded-3xl border bg-card shadow-card">
+            <img src="./img/feedback-jessica.webp" alt="Conversa no WhatsApp com a Jessica" loading="lazy" class="w-full">
+          </figure>
+        </div>
+
+        <div class="mt-16 md:mt-20">
+          <div class="flex flex-col items-center gap-4">
+            <a href="#oferta" class="btn-cta">Quero esse resultado na minha casa</a>
+            <p class="text-sm text-muted-foreground">🛡️ Garantia de 7 dias &nbsp;|&nbsp; 🔒 Pagamento seguro por PIX ou cartão</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         8. PARA QUEM É INDICADO
+    ================================================================== -->
+    <section class="bg-muted px-5 py-16 md:py-24">
+      <div class="mx-auto max-w-5xl">
+        <div class="mb-10 text-center">
+          <h2 class="font-display text-3xl font-black uppercase leading-tight md:text-5xl">Feito para você que é</h2>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-3">
+          <div class="rounded-3xl bg-card p-7 shadow-card">
+            <div class="text-4xl">👨‍👩‍👧</div>
+            <h3 class="mt-3 font-display text-xl font-extrabold">Pais e Mães</h3>
+            <p class="mt-2 text-muted-foreground">Que buscam tirar os filhos das telas com atividades construtivas.</p>
+          </div>
+
+          <div class="rounded-3xl bg-card p-7 shadow-card">
+            <div class="text-4xl">📚</div>
+            <h3 class="mt-3 font-display text-xl font-extrabold">Educadores</h3>
+            <p class="mt-2 text-muted-foreground">Que precisam de material de apoio rico em valores éticos.</p>
+          </div>
+
+          <div class="rounded-3xl bg-card p-7 shadow-card">
+            <div class="text-4xl">⛪</div>
+            <h3 class="mt-3 font-display text-xl font-extrabold">Ministérios Infantis</h3>
+            <p class="mt-2 text-muted-foreground">Excelente recurso para escola bíblica e grupos de crianças.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         9. BÔNUS EXCLUSIVOS (3 PRESENTES)
+    ================================================================== -->
+    <section class="bg-background px-5 py-16 md:py-24">
+      <div class="mx-auto max-w-5xl">
+        <div class="rounded-[2rem] border-2 border-dashed border-accent p-6 md:p-10">
+          <p class="mx-auto mb-8 w-fit rounded-full bg-accent px-5 py-2 text-sm font-black uppercase text-accent-foreground">
+            🔥 2 bônus inclusos no Kit Completo
+          </p>
+
+          <div class="grid gap-5 md:grid-cols-2">
+            <div class="rounded-3xl bg-card p-6 text-center shadow-card">
+              <div class="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-soft-green text-3xl">🧭</div>
+              <h3 class="font-display text-xl font-extrabold">Passaporte do Explorador Bíblico</h3>
+              <p class="mt-2">De <span class="line-through text-muted-foreground">R$ 19,90</span> por <span class="font-black text-primary">GRÁTIS</span></p>
+            </div>
+
+            <div class="rounded-3xl bg-card p-6 text-center shadow-card">
+              <div class="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-soft-green text-3xl">🌈</div>
+              <h3 class="font-display text-xl font-extrabold">E-book Aprendendo com Alegria</h3>
+              <p class="mt-2">De <span class="line-through text-muted-foreground">R$ 19,90</span> por <span class="font-black text-primary">GRÁTIS</span></p>
+            </div>
+          </div>
+
+          <p class="mx-auto mt-8 w-fit rounded-2xl bg-soft-green px-5 py-3 text-center font-display font-black uppercase text-primary-deep">
+            💰 Economize R$ 49,80 em bônus hoje no Kit Completo
+          </p>
+
+          <div class="mt-12">
+            <div class="flex flex-col items-center gap-4">
+              <a href="#oferta" class="btn-cta">Quero o kit + bônus</a>
+              <p class="text-sm text-muted-foreground">🛡️ Garantia de 7 dias &nbsp;|&nbsp; 🔒 Pagamento seguro por PIX ou cartão</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         10. TABELA DE PREÇOS / ESCOLHA SEU KIT (#oferta)
+    ================================================================== -->
+    <section id="oferta" class="scroll-mt-4 bg-muted px-5 py-16 md:py-24">
+      <div class="mx-auto max-w-5xl">
+        <div class="mb-10 text-center">
+          <p class="mb-2 text-sm font-bold uppercase tracking-wider text-primary">Escolha sua opção</p>
+          <h2 class="font-display text-3xl font-black uppercase leading-tight md:text-5xl">Escolha o seu kit</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">Pagamento único, acesso vitalício e garantia de 7 dias nas duas opções.</p>
+        </div>
+
+        <div class="grid items-stretch gap-8 md:grid-cols-2">
+          
+          <!-- OPÇÃO 1: KIT BÁSICO -->
+          <div class="order-2 flex flex-col rounded-3xl border bg-card p-7 shadow-card md:order-1">
+            <h3 class="font-display text-2xl font-black">Kit Básico</h3>
+            <ul class="mt-5 flex-1 space-y-2.5">
+              <li class="flex gap-3"><span class="text-primary">✔</span>Kit completo Tesouros do Céu (11 livros em PDF)</li>
+              <li class="flex gap-3"><span class="text-primary">✔</span>Acesso imediato por e-mail</li>
+              <li class="flex gap-3"><span class="text-primary">✔</span>Imprima quantas vezes quiser</li>
+              <li class="flex gap-3"><span class="text-primary">✔</span>Garantia de 7 dias</li>
+              <li class="flex gap-3 text-muted-foreground line-through"><span>✖</span>3 bônus exclusivos (Bíblia em Quadrinhos, Passaporte e E-book)</li>
+            </ul>
+
+            <div class="mt-8 text-center">
+              <p class="font-display text-5xl font-black">R$14,90</p>
+              <p class="mb-5 text-sm text-muted-foreground">pagamento único</p>
+              <!-- ATENÇÃO: Coloque aqui o link da Cakto específico do plano de R$ 14,90 -->
+              <a href="https://pay.cakto.com.br/35p3gjy" data-checkout class="inline-flex w-full items-center justify-center rounded-full border-2 border-primary px-6 py-4 font-display font-black uppercase text-primary transition-colors hover:bg-soft-green">
+                Quero o básico
+              </a>
+            </div>
+          </div>
+
+          <!-- OPÇÃO 2: KIT COMPLETO + BÔNUS -->
+          <div class="relative order-1 flex flex-col rounded-3xl border-4 border-primary bg-card p-7 shadow-card md:order-2 md:-my-4">
+            <span class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-accent px-4 py-1.5 text-xs font-black uppercase text-accent-foreground">
+              ⭐ Mais escolhido
+            </span>
+            <h3 class="font-display text-2xl font-black text-primary">Kit Completo + 2 Bônus Exclusivos</h3>
+            <ul class="mt-5 flex-1 space-y-2.5">
+              <li class="flex gap-3 font-medium"><span class="text-primary">✔</span>Kit completo Tesouros do Céu (11 livros em PDF)</li>
+              <li class="flex gap-3 font-medium"><span class="text-primary">✔</span>🎁 Passaporte do Explorador Bíblico</li>
+              <li class="flex gap-3 font-medium"><span class="text-primary">✔</span>🎁 E-book Aprendendo com Alegria</li>
+              <li class="flex gap-3 font-medium"><span class="text-primary">✔</span>Acesso imediato por e-mail</li>
+              <li class="flex gap-3 font-medium"><span class="text-primary">✔</span>Imprima quantas vezes quiser</li>
+              <li class="flex gap-3 font-medium"><span class="text-primary">✔</span>Garantia de 7 dias</li>
+            </ul>
+
+            <div class="mt-8 text-center">
+              <p class="text-muted-foreground line-through">De R$149,90</p>
+              <p class="font-display text-6xl font-black text-primary">R$24,90</p>
+              <p class="mb-5 text-sm text-muted-foreground">pagamento único no PIX ou cartão</p>
+              <!-- ATENÇÃO: Coloque aqui o link da Cakto específico do plano de R$ 24,90 -->
+              <a href="https://pay.cakto.com.br/pden9g7_420551" data-checkout class="btn-cta">
+                Quero o kit completo agora
+              </a>
+              <p class="mt-3 text-xs text-muted-foreground">Por apenas R$10 a mais você leva os 2 bônus (R$ 49,80 em bônus)</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         11. GARANTIA DE 7 DIAS
+    ================================================================== -->
+    <section class="bg-muted px-5 py-16 md:py-24">
+      <div class="mx-auto max-w-5xl">
+        <div class="mx-auto max-w-3xl rounded-3xl bg-card p-8 text-center shadow-card md:p-12">
+          <div class="text-6xl">🛡️</div>
+          <h2 class="mt-4 font-display text-3xl font-black">Garantia de 7 dias: satisfação ou seu dinheiro de volta</h2>
+          <p class="mt-4 text-muted-foreground">
+            Você tem 7 dias para avaliar o material. Se achar que as atividades não agregaram na rotina da sua família ou que seu filho não engajou, nós devolvemos 100% do seu investimento. Sem burocracia: é só pedir pelo WhatsApp ou pelo e-mail da compra.
+          </p>
+          <div class="mt-12">
+            <div class="flex flex-col items-center gap-4">
+              <a href="#oferta" class="btn-cta">Quero garantir o kit agora</a>
+              <p class="text-sm text-muted-foreground">🛡️ Garantia de 7 dias &nbsp;|&nbsp; 🔒 Pagamento seguro por PIX ou cartão</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         12. DÚVIDAS FREQUENTES (FAQ)
+    ================================================================== -->
+    <section class="bg-background px-5 py-16 md:py-24">
+      <div class="mx-auto max-w-5xl">
+        <div class="mb-10 text-center">
+          <h2 class="font-display text-3xl font-black uppercase leading-tight md:text-5xl">Dúvidas frequentes</h2>
+        </div>
+
+        <div class="mx-auto max-w-3xl space-y-3">
+          <details class="group rounded-2xl border bg-card p-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between font-bold">
+              Como vou receber o material?
+              <span class="text-primary transition-transform group-open:rotate-45">＋</span>
+            </summary>
+            <p class="mt-3 text-muted-foreground">Todo o conteúdo é digital. Assim que o pagamento for aprovado, você receberá um e-mail com o link para baixar todos os arquivos em PDF.</p>
+          </details>
+
+          <details class="group rounded-2xl border bg-card p-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between font-bold">
+              O pagamento é mensal ou único?
+              <span class="text-primary transition-transform group-open:rotate-45">＋</span>
+            </summary>
+            <p class="mt-3 text-muted-foreground">O pagamento é único, nas duas opções. Você não pagará nenhuma mensalidade e terá acesso vitalício aos livros.</p>
+          </details>
+
+          <details class="group rounded-2xl border bg-card p-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between font-bold">
+              Para qual idade o material é recomendado?
+              <span class="text-primary transition-transform group-open:rotate-45">＋</span>
+            </summary>
+            <p class="mt-3 text-muted-foreground">As atividades foram pensadas para o desenvolvimento infantil, sendo ideais para crianças de 3 a 10 anos.</p>
+          </details>
+
+          <details class="group rounded-2xl border bg-card p-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between font-bold">
+              Por que pedem meu CPF na hora de pagar?
+              <span class="text-primary transition-transform group-open:rotate-45">＋</span>
+            </summary>
+            <p class="mt-3 text-muted-foreground">O CPF é exigido pela plataforma de pagamento (Cakto) para gerar o PIX ou processar o cartão com segurança. Ele não é usado para outro fim por nós.</p>
+          </details>
+
+          <details class="group rounded-2xl border bg-card p-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between font-bold">
+              E se eu não gostar do material?
+              <span class="text-primary transition-transform group-open:rotate-45">＋</span>
+            </summary>
+            <p class="mt-3 text-muted-foreground">Você tem 7 dias de garantia. Basta nos chamar no WhatsApp ou responder o e-mail da compra e devolvemos 100% do valor.</p>
+          </details>
+        </div>
+
+        <div class="mt-14 md:mt-16">
+          <div class="flex flex-col items-center gap-4">
+            <a href="#oferta" class="btn-cta">Quero garantir o kit agora</a>
+            <p class="text-sm text-muted-foreground">🛡️ Garantia de 7 dias &nbsp;|&nbsp; 🔒 Pagamento seguro por PIX ou cartão</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         13. RODAPÉ E BOTÃO FLUTUANTE DO WHATSAPP
+    ================================================================== -->
+    <footer class="border-t px-5 py-8 text-center text-sm text-muted-foreground">
+      © 2026 Tesouros do Céu. Todos os direitos reservados.
+    </footer>
+  </main>
+
+  <!-- =================================================================
+       14. SCRIPTS (UTMs para Cakto + Data Dinâmica + Carrossel)
+  ================================================================== -->
+  <script>
+    // 1. Repassa parâmetros UTM da página para os links de checkout da Cakto
+    var qs = location.search;
+    document.querySelectorAll('[data-checkout]').forEach(function(a) {
+      if (qs) {
+        a.href += (a.href.indexOf('?') > -1 ? '&' : '?') + qs.slice(1);
+      }
+    });
+
+    // 2. Atualiza a data de hoje na barra do topo automaticamente
+    var d = new Date().toLocaleDateString('pt-BR');
+    var bar = document.querySelector('main > div');
+    if (bar && bar.textContent.indexOf('—') < 0) {
+      bar.textContent += ' — ' + d;
+    }
+
+    // 3. Controle do carrossel de amostras internas
+    var tr = document.querySelector('.snap-x');
+    if (tr) {
+      var w = tr.parentElement;
+      var bt = w.querySelectorAll(':scope > button');
+      var dots = w.querySelectorAll(':scope > div:last-child > button');
+      var i = 0;
+
+      function go(n) {
+        n = Math.max(0, Math.min(tr.children.length - 1, n));
+        var c = tr.children[n];
+        tr.scrollTo({ left: c.offsetLeft - tr.offsetLeft, behavior: 'smooth' });
+      }
+
+      function upd() {
+        i = Math.round(tr.scrollLeft / (tr.children[0].offsetWidth + 20));
+        dots.forEach(function(b, k) {
+          b.className = b.className.replace(/w-6 bg-primary|w-2\.5 bg-border/, k === i ? 'w-6 bg-primary' : 'w-2.5 bg-border');
+        });
+      }
+
+      tr.addEventListener('scroll', upd);
+      bt[0].onclick = function() { go(i - 1); };
+      bt[1].onclick = function() { go(i + 1); };
+      dots.forEach(function(b, k) {
+        b.onclick = function() { go(k); };
+      });
+    }
+  </script>
+
+  <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
